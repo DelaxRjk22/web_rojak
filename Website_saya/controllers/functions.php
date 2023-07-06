@@ -6,7 +6,7 @@ function koneksi()
   $server = "localhost";
   $username = "root";
   $password = "";
-  $database = "web_dasar_rojak";
+  $database = "web_dasar_a1";
   return mysqli_connect(
     $server,
     $username,

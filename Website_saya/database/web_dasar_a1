@@ -32,7 +32,7 @@ CREATE TABLE `buku` (
   `judul_buku` varchar(50) NOT NULL,
   `tahun_terbit` year(4) NOT NULL,
   `penulis` varchar(25) NOT NULL,
-  `Penerbit` varchar(25) NOT NULL,
+  `penerbit` varchar(25) NOT NULL,
   `simpan` datetime NOT NULL,
   `edit` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
