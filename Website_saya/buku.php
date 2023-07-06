@@ -1,3 +1,7 @@
+<?php
+require "controllers/functions.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +12,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Selamat Datang Di halaman saya</h1>
+    <h1>Selamat Datang Di Halaman Buku</h1>
     <hr>
     <ul>
-        <a href="buku.php">
+        <a href="index.php">
             <li>Home</li>
         </a>
-        <a href="index.php">
+        <a href="pinjam.php">
             <li>Pinjam Buku</li>
         </a>
     </ul>
     <hr>
-    <a href="tambah_buku.php">Tambah Buku</a>
-    <table>
+    <a href="tambah_buku.php">Tambah Buku</a>   
+    <table border="1">
         </tr>
              <th>ID</th>
              <th>Judul Buku</th>
@@ -30,6 +34,20 @@
              <th>Update</th>
              <th>Opsi</th>
         </tr>
+        <?php
+        foreach (buku() as $b) : ?>
+            <tr>
+                <td><?= $b["id"]; ?></td>
+                <td><?= $b["judul_buku"]; ?></td>
+                <td><?= $b["tahun_Terbit"]; ?></td>
+                <td><?= $b["penulis"]; ?></td>
+                <td><?= $b["Penerbit"]; ?></td>
+                <td><?= $b["simpan"]; ?></td>
+                <td><?= $b["edit"]; ?></td>
+                <td><a href=""></a></td>
+        </tr>
+    <?php endforeach;
+    ?>    
     </table>
 </body>
 </html>
