@@ -72,38 +72,38 @@
     </form>
 
     <?php
-    // if (isset($_POST["simpan_buku"])) {
-    //     $judul_buku = $_POST["judul_buku"];
-    //     $tahun_terbit = $_POST["tahun_terbit"];
-    //     $penulis = $_POST["penulis"];
-    //     $Penerbit = $_POST["Penerbit"];
+    if (isset($_POST["simpan_buku"])) {
+        $judul_buku = $_POST["judul_buku"];
+        $tahun_terbit = $_POST["tahun_terbit"];
+        $penulis = $_POST["penulis"];
+        $Penerbit = $_POST["Penerbit"];
 
-    //     $tanggal = date("Y-m-d H:i:s");
+        $tanggal = date("Y-m-d H:i:s");
 
-    //     if ($judul_buku == "") {
-    //         echo "<i>Judul buku masih kosong!</i>";
-    //     } elseif ($tahun_terbit == "") {
-    //         echo "<i>Tahun terbit masih kosong!</i>";
-    //     } elseif ($penulis == "") {
-    //         echo "<i>Penulis masih kosong!</i>";
-    //     } elseif ($Penerbit == "") {
-    //         echo "<i>Penerbit masih kosong!</i>";
-    //     } else {
-    //         $simpan = q("INSERT INTO buku VALUES(null,
-    //         '$judul_buku','$tahun_terbit','$penulis','$Penerbit',
-    //         '$tanggal','$tanggal')");
-    //         if ($simpan) {
-    //             echo "
-    //             <script>
-    //             alert('Buku berhasil ditambahkan');
-    //             location='buku.php';
-    //             </script>
-    //             ";
-    //         } else {
-    //             echo "<i>Data Gagal ditambahkan!</i>";
-    //         }
-    //     }
-    // }
+        if ($judul_buku == "") {
+            echo "<i>Judul buku masih kosong!</i>";
+        } elseif ($tahun_terbit == "") {
+            echo "<i>Tahun terbit masih kosong!</i>";
+        } elseif ($penulis == "") {
+            echo "<i>Penulis masih kosong!</i>";
+        } elseif ($Penerbit == "") {
+            echo "<i>Penerbit masih kosong!</i>";
+        } else {
+            $simpan = q("INSERT INTO buku VALUES(null,
+            '$judul_buku','$tahun_terbit','$penulis','$Penerbit',
+            '$tanggal','$tanggal')");
+            if ($simpan) {
+                echo "
+                <script>
+                alert('Buku berhasil ditambahkan');
+                location='buku.php';
+                </script>
+                ";
+            } else {
+                echo "<i>Data Gagal ditambahkan!</i>";
+            }
+        }
+    }
     ?>
 
 </body>

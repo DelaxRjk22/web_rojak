@@ -6,7 +6,7 @@ function koneksi()
   $server = "localhost";
   $username = "root";
   $password = "";
-  $database = "web_dasar_a1";
+  $database = "web_dasar_rojak";
   return mysqli_connect(
     $server,
     $username,
@@ -23,4 +23,19 @@ function q($data)
 function buku()
 {
   return q("SELECT * FROM `buku`");
+}
+
+function buku_satu($id_buku, $isi_tabel)
+{
+
+$x = mysqli_fetch_assoc(q("SELECT * FROM buku WHERE
+id = '$id_buku'"));
+return $x[$isi_tabel];
+}
+
+function buku_satu_jumlah($id_buku)
+{
+return mysqli_num_rows(
+  q("SELECT * FROM buku WHERE id = '$id_buku'")
+);
 }
